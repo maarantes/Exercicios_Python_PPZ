@@ -1,0 +1,87 @@
+Marco Antonio Arantes de Souza Filho
+DSM 1 Semestre
+
+-------------------------------------------------
+
+Exercício 1
+
+nota = int(input("Digite uma nota de 0 a 10: "))
+
+while nota < 0 or nota > 10:
+    print ("Insira uma nota válida!")
+    nota = int(input("Digite uma nota de 0 a 10: "))
+else:
+    print ("Nota registrada!")
+
+-------------------------------------------------
+
+Exercício 2
+
+nome = str(input("Digite seu nome de usuário: "))
+senha = str(input("Digite sua senha: "))
+
+while nome == senha:
+    print ("Erro! O nome de usuário não pode ser o mesmo que a senha!")
+    nome = str(input("Digite seu nome de usuário: "))
+    senha = str(input("Digite sua senha: "))
+else:
+    print ("Bem vindo, usuário" , nome)
+
+-------------------------------------------------
+
+Exercício 3
+
+pais_a = 80000
+pais_b = 200000
+
+anos = 0
+
+while pais_a <= pais_b:
+    pais_a = pais_a + pais_a * 3/100
+    pais_b = pais_b + pais_b * 1.5/100
+    anos = anos + 1
+
+print ("Vai demorar" , anos , "anos para o País A ultrapassar o País B.")
+
+-------------------------------------------------
+
+Exercício 4
+
+num = int(input("Digite o número: "))
+primeiro, segundo = 1, 1
+contador = 1
+
+while contador <= num - 2:
+    primeiro, segundo = segundo, primeiro + segundo
+    contador = contador + 1
+print ("O número de Fibonacci do número" , num , "é" , segundo)
+
+-------------------------------------------------
+
+Exercício 5
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+
+while num1 % num2 != 0:
+   num1, num2 = num2, num1 % num2
+
+print (num2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

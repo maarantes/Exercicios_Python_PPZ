@@ -1,0 +1,137 @@
+Marco Antonio Arantes de Souza Filho
+DSM / 1 Semestre / Sala 112
+
+Exercício 1
+
+lado1 = int(input("Digite o tamanho do primeiro lado: "))
+lado2 = int(input("Digite o tamanho do segundo lado: "))
+lado3 = int(input("Digite o tamanho do terceiro lado: "))
+
+if lado1 > lado2 + lado3 or lado2 > lado1 + lado3 or lado3 > lado1 + lado2:
+    print ("Não é possível formar um triângulo com esses valores!")
+elif lado1 == lado2 == lado3:
+    print ("Esse triângulo é equilátero!")
+elif lado1 != lado2 != lado3:
+    print ("Esse triângulo é escaleno!")
+else:
+    print ("Esse triângulo é isósceles!")
+
+-------------------------------------------------
+
+Exercício 2
+
+from calendar import isleap
+
+ano = int(input("Digite o ano: "))
+
+if isleap(ano):
+    print("Esse ano é bissexto!")
+else:
+    print("Esse ano não é bissexto!")
+
+-------------------------------------------------
+
+Exercício 3
+
+peso = int(input("Digite o peso do seu peixe: "))
+if peso > 50:
+    excesso = peso - 50
+    multa = excesso * 4
+    print ("Você atingiu o limite de 50 quilos com um excesso de" , excesso , "kg e deverá pagar R$" , multa , "de multa.")
+else:
+    excesso = 0
+    multa = 0
+    print ("Voce está dentro do limite. Há excesso de" , excesso , "kg e multa de R$" , multa)
+
+-------------------------------------------------
+
+Exercício 4
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+if num1 > num2 and num1 > num3:
+    print ("O número" , num1 , "é maior!")
+elif num2 > num1 and num2 > num3:
+    print ("O número" , num2 , "é maior!")
+elif num3 > num1 and num3 > num2:
+    print ("O número" , num3 , "é maior!")
+else:
+    print ("Você precisa inserir 3 números distintos!")
+
+-------------------------------------------------
+
+Exercício 5
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+erro = 0
+
+if num1  == num2 or num1 == num3 or num2 == num3:
+    print ("Você precisa inserir 3 números distintos!")
+    erro = 1
+elif num1 > num2 and num2 > num3:
+    print ("O número" , num1 , "é o maior!")
+elif num2 > num1 and num2 > num3:
+    print ("O número" , num2 , "é o maior!")
+else:
+    print ("O número" , num3 , "é o maior!")
+
+
+if erro == 0:
+    if num1 < num2 and num1 < num3:
+        print ("O número" , num1 , "é o menor!")
+    elif num2 < num1 and num2 < num3:
+        print ("O número" , num2 , "é o menor!")
+    else:
+        print ("O número" , num3 , "é 0 menor!")
+
+-------------------------------------------------
+
+Exercício 6
+
+ganha_hora = float(input("Digite o quanto você ganha por hora: "))
+horas_mes = float(input("Digite quantas horas você trabalha por mês: "))
+
+salario_bruto = ganha_hora * horas_mes
+imposto = salario_bruto * 11/100
+previdencia = salario_bruto * 8/100
+sindicato = salario_bruto * 5/100
+salario_liquido = salario_bruto - imposto - previdencia - sindicato
+
+print (f"Segue a lista dos descontos de seu salário:")
+print (f"Salário bruto: R${salario_bruto:.0f}")
+print (f"Imposto de Renda: -R${imposto:.0f}")
+print (f"Previdência: -R${previdencia:.0f}")
+print (f"Sindicato: -R${sindicato:.0f}")
+print (f"Salário Líquido: R$ {salario_liquido:.0f}")
+
+-------------------------------------------------
+
+Exercício 7
+
+import math
+
+tamanho = int(input("Digite o tamanho, em metros quadrados, da área a ser pintada: "))
+lata = tamanho / 54
+comprar_lata = math.ceil(lata)
+comprar_preco = comprar_lata * 80
+print ("Você precisa comprar" , comprar_lata , "latas de tinta, o que irá custar R$" , comprar_preco)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

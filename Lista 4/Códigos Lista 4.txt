@@ -1,0 +1,153 @@
+Marco Antonio Arantes de Souza Filho
+DSM 1 Semestre
+
+-------------------------------------------------
+
+Exercício 1
+
+import random
+
+lista = random.sample(range(100), 10)
+
+maior = menor = lista[0]
+
+for x in lista:
+    if x > maior:
+        maior = x
+    if x < menor:
+        menor = x
+
+print ("Lista:" , lista)
+print ("Maior número:" , maior)
+print ("Menor número:" , menor)
+
+-------------------------------------------------
+
+Exercício 2
+
+import random
+
+lista = random.sample(range(100), 20)
+
+par = []
+impar = []
+
+for x in lista:
+    if x % 2 == 0:
+        par.append (x)
+    else:
+        impar.append (x)
+
+print ("Lista:" , lista)
+print ("Números pares:" , par)
+print ("Números impares:" , impar)
+
+-------------------------------------------------
+
+Exercício 3
+
+import random
+
+vetor1 = random.sample(range(100), 10)
+vetor2 = random.sample(range(100), 10)
+vetor3 = []
+
+for x in range(10):
+    if x % 2 == 0:
+        vetor3.insert(x, vetor1[x])
+    else:
+        vetor3.insert(x, vetor2[x])
+
+print ("Vetor 1:" , vetor1)
+print ("Vetor 2:", vetor2)
+print ("Vetor 3:" , vetor3)
+
+-------------------------------------------------
+
+Exercício 4
+
+texto = """The Python Software Foundation and the global Python community welcome and encourage participation by everyone. 
+Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles.
+We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.""".lower()
+
+especial = [".", ",", ":", ]
+lista_nova = []
+
+for caracter in especial:
+    texto = texto.replace(caracter, "")
+
+for palavra in texto.split():
+    if palavra[0] in "python" or palavra[-1] in "python":
+        lista_nova.append(y)
+
+print (lista_nova)
+
+-------------------------------------------------
+
+Exercício 5
+
+texto = """The Python Software Foundation and the global Python community welcome and encourage participation by everyone.
+Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles.
+We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.""".lower()
+
+especial = [".", ",", ":", ]
+lista_nova = []
+
+for caracter in especial:
+    texto = texto.replace(caracter, "")
+
+for palavra in texto.split():
+    if len(palavra) > 4:
+        for letra in palavra:
+            if letra in "python":
+                lista_nova.append(palavra)
+                break
+
+print ("Número de palavras que satisfazem a condição:" , len(lista_nova))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
